@@ -1,0 +1,132 @@
+.subscribe {
+  padding: $content-padding;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: toRem(32);
+    background-image: url("../../assets/images/bg-image.png");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+
+    .subscribe__decor {
+      pointer-events: none;
+
+      .decor {
+        position: absolute;
+        border: toRem(2) solid $color-white;
+      }
+      .decor--1 {
+        top: 12%;
+        left: 5%;
+        width: toRem(80);
+        height: toRem(80);
+        border-radius: toRem(24);
+      }
+      .decor--2 {
+        top: 20%;
+        left: 20%;
+        width: toRem(36);
+        height: toRem(36);
+        border-radius: 50%;
+      }
+      .decor--3 {
+        top: 60%;
+        left: 7%;
+        width: toRem(36);
+        height: toRem(36);
+        border-radius: 50%;
+      }
+      .decor--4 {
+        top: 70%;
+        left: 15%;
+        width: toRem(55);
+        height: toRem(55);
+        border-radius: toRem(24);
+      }
+      .decor--5 {
+        top: 15%;
+        left: 75%;
+        width: toRem(70);
+       height: toRem(70);
+        border-radius: toRem(24);
+      }
+      .decor--6 {
+        top: 30%;
+        left: 90%;
+        width: toRem(36);
+        height: toRem(36);
+        border-radius: 50%;
+      }
+      .decor--7 {
+        top: 50%;
+        left: 80%;
+        width: toRem(36);
+        height: toRem(36);
+        border-radius: 50%;
+      }
+      .decor--8 {
+        top: 75%;
+        left: 90%;
+        width: toRem(55);
+        height: toRem(55);
+        border-radius: toRem(24);
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    width: 50%;
+    &--text{
+      padding: 0 toRem(50) toRem(10) toRem(50);
+    }
+  }
+}
+
+.subscribe-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: toRem(20);
+
+  &::before {
+    content: "";
+    width: toRem(24);
+    height: toRem(24);
+    background-color: $color-info;
+    mask: url("../../assets/icons/mail.svg") center/contain no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@include media-width-down('xl') {
+  .subscribe {
+    padding: $content-padding-xl;
+  }
+}
+
+@include media-width-down('lg') {
+  .subscribe {
+    padding: $content-padding-lg;
+    &__box{
+      height: 30vh;
+    }
+    &__decor{
+      display: none;
+    }
+    &__content{
+      width: 90%;
+      &--text{
+        padding: 0 toRem(10);
+      }
+    }
+  }
+}

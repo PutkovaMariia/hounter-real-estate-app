@@ -1,0 +1,63 @@
+@use "sass:map";
+@import "../parts/break";
+$grid-breakpoints-width: (
+        'xxs': $w-xxs,
+        'xs': $w-xs,
+        'sm': $w-sm,
+        'md': $w-md,
+        'mdx': $w-mdx,
+        'lg': $w-lg,
+        'xl': $w-xl,
+        '2xl': $w-2xl,
+);
+
+$grid-breakpoints-height: (
+        'xs': $h-xs,
+        'sm': $h-sm,
+        'md': $h-md,
+        'mdx': $h-mdx,
+        'lg': $h-lg,
+        'xl': $h-xl,
+        '2xl': $h-2xl,
+        '4k': $h-4k,
+);
+
+@mixin media-width-down($breakpoint) {
+  @if map.has-key($grid-breakpoints-width, $breakpoint) {
+    @media (max-width: map.get($grid-breakpoints-width, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$breakpoint}`. Available breakpoints: #{map.keys($grid-breakpoints-width)}.";
+  }
+}
+
+@mixin media-width-up($breakpoint) {
+  @if map.has-key($grid-breakpoints-width, $breakpoint) {
+    @media (min-width: map.get($grid-breakpoints-width, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$breakpoint}`. Available breakpoints: #{map.keys($grid-breakpoints-width)}.";
+  }
+}
+
+@mixin media-height-down($breakpoint) {
+  @if map.has-key($grid-breakpoints-height, $breakpoint) {
+    @media (max-height: map.get($grid-breakpoints-height, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$breakpoint}`. Available breakpoints: #{map.keys($grid-breakpoints-height)}.";
+  }
+}
+
+@mixin media-height-up($breakpoint) {
+  @if map.has-key($grid-breakpoints-height, $breakpoint) {
+    @media (min-height: map.get($grid-breakpoints-height, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$breakpoint}`. Available breakpoints: #{map.keys($grid-breakpoints-height)}.";
+  }
+}

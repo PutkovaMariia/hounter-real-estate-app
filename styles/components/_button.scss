@@ -1,0 +1,220 @@
+.btn {
+  padding: toRem(8) toRem(16);
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: toRem(100);
+  transition: all 0.2s;
+  min-width: max-content;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &--white {
+    background: rgba($color-white, 0.3);
+    color: $color-white;
+    border: 1px solid $color-white;
+
+    &:hover {
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &--select {
+    position: relative;
+    z-index: 10;
+
+    &__text {
+      position: relative;
+      cursor: pointer;
+      z-index: 12;
+
+      &::after {
+        content: "";
+        width: toRem(15);
+        height: toRem(15);
+        margin-left: toRem(8);
+
+        background-color: currentColor;
+        mask-image: url("../../assets/icons/arrow.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+
+        transform: rotate(90deg);
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center;
+        display: inline-block;
+      }
+
+      &--active::after {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &__list {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba($color-white, 0.1);
+      border: 1px solid $color-white;
+      border-radius: toRem(20);
+      border-top: none;
+      list-style: none;
+      margin: 0;
+      padding: toRem(40) 0 0 0;
+      max-height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+
+
+      &--active {
+        max-height: 100vh;
+        opacity: 1;
+        visibility: visible;
+        z-index: 11;
+      }
+
+      li {
+        padding: toRem(8) toRem(12);
+        cursor: pointer;
+        transition: background 0.3s;
+        border-radius: toRem(20);
+
+        &:hover {
+          background: $color-primary-dark;
+          color: $color-white;
+        }
+
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  &--outline {
+    cursor: pointer;
+    color: $color-primary-dark;
+    padding: toRem(12) toRem(24);
+
+    &.btn--white,
+    &.btn--select {
+      padding: toRem(8) toRem(16);
+    }
+
+    &--bg-border {
+      background-color: $color-primary-light;
+      border: 1px solid $color-primary-dark;
+    }
+
+    &--bg {
+      background-color: $color-primary-light;
+      border: none;
+    }
+
+    &--border {
+      border: 1px solid $color-primary-dark;
+      background-color: transparent;
+    }
+  }
+
+  &--filled {
+    cursor: pointer;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: toRem(12) toRem(24);
+    border: none;
+
+    &.btn--white, &.btn--select {
+      padding: toRem(8) toRem(16);
+    }
+
+    &--search {
+      margin-right: toRem(5);
+
+      &::after {
+        @include iconAfter("../../assets/icons/arrow.svg");
+      }
+    }
+  }
+
+  &--img-before {
+    margin-left: toRem(5);
+
+    &--house::before {
+      @include iconBefore("../../assets/icons/house.svg");
+    }
+
+    &--villa::before {
+      @include iconBefore("../../assets/icons/villa.svg");
+    }
+
+    &--apartment::before {
+      @include iconBefore("../../assets/icons/apartment.svg");
+    }
+
+    &--contact::before {
+      @include iconBefore("../../assets/icons/call.svg");
+    }
+  }
+
+  &--nav {
+    border-radius: 50%;
+    padding: toRem(12);
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: toRem(24);
+      height: toRem(24);
+      background-color: currentColor;
+      mask-image: url("../../assets/icons/arrow.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    &--back::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include media-width-down('lg') {
+
+  .btn{
+    padding: toRem(14) toRem(14);
+    &--img-before {
+      &--house::before {
+        @include iconBefore("../../assets/icons/house.svg", 0);
+      }
+
+      &--villa::before {
+        @include iconBefore("../../assets/icons/villa.svg", 0);
+      }
+
+      &--apartment::before {
+        @include iconBefore("../../assets/icons/apartment.svg", 0);
+      }
+    }
+    &__text {
+      display: none;
+    }
+  }
+}

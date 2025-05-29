@@ -1,0 +1,142 @@
+.introduction {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: stretch;
+
+  &__box {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0 toRem(100) 0 toRem(124);
+
+    &__text {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    width: 50%;
+    overflow: hidden;
+
+    &--main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 0 0 toRem(80);
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: toRem(60);
+    left: 0;
+    display: flex;
+    gap: $gap-medium;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 0 toRem(10) 0 toRem(50);
+    width: 100%;
+
+    &__item {
+      display: flex;
+      background-color: $color-white;
+      padding: toRem(24);
+      border-radius: toRem(32);
+      flex: 0 0 auto;
+      min-width: 20%;
+      max-width: 100%;
+      scroll-snap-align: center;
+      text-align: center;
+
+      &__stack {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin-right: toRem(16);
+
+        &__picture {
+          position: relative;
+          border: 3px solid $color-white;
+          border-radius: 50%;
+          height: toRem(55);
+          width: toRem(55);
+          overflow: hidden;
+        }
+      }
+
+      &__stack--multiple {
+
+        & .introduction__scroll__item__stack__picture {
+          &:nth-child(n+2) {
+            margin-left: -(toRem(30));
+          }
+          &:nth-child(2) {
+            z-index: 1;
+          }
+          &:nth-child(3) {
+            z-index: 2;
+          }
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: toRem(24);
+    height: toRem(24);
+    background-color: $color-secondary;
+    mask: url("../../assets/icons/location.svg") center/contain no-repeat;
+    display: inline-block;
+    position: absolute;
+    left: -(toRem(10));
+  }
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: toRem(20);
+  width: 90%;
+}
+
+@include media-width-down('lg') {
+  .introduction {
+    &__img {
+      display: none;
+    }
+
+    &__box {
+      width: 100%;
+      padding: 0 toRem(20);
+    }
+  }
+}
+
+@include media-width-down('2xl') {
+  .introduction {
+    &__scroll {
+      width: unset;
+    }
+  }
+}

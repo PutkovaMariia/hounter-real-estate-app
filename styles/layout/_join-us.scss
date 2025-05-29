@@ -1,0 +1,194 @@
+.join-us {
+  padding: $content-padding;
+
+  &__box {
+    display: flex;
+    gap: $gap-large;
+    height: 100%;
+  }
+
+  &__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 35%;
+    border-radius: toRem(8);
+    padding: toRem(40);
+    box-shadow: 0 toRem(8) toRem(32) 0 #0C153717;
+
+    &--title {
+      padding-bottom: toRem(28);
+    }
+
+    &--paragraph {
+      position: relative;
+      padding-bottom: toRem(50);
+
+      &::after {
+        position: absolute;
+        bottom: toRem(24);
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        width: toRem(40);
+        height: toRem(2);
+        background-color: $color-primary;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: toRem(230);
+      height: toRem(180);
+      background-image: url("../../assets/icons/page-tool.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__form {
+    width: 65%;
+    border-radius: toRem(8);
+    padding: toRem(40);
+    box-shadow: 0 toRem(8) toRem(32) 0 #0C153717;
+
+    &--item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-bottom: toRem(28);
+
+      .textarea-char-count {
+        position: absolute;
+        bottom: toRem(40);
+        right: toRem(20);
+      }
+    }
+
+    &--label {
+      flex: 0 0 20%;
+      &--message{
+        align-self: flex-start;
+        padding-top: toRem(17);
+      }
+    }
+
+    &--input {
+      flex: 1;
+      width: 100%;
+      padding: toRem(16) toRem(24);
+      border: 1px solid $color-grey-1;
+      outline: none;
+      border-radius: toRem(28);
+    }
+
+    &--check {
+      display: flex;
+      align-items: start;
+      width: 80%;
+      margin-left: 20%;
+    }
+  }
+}
+
+.custom-checkbox {
+  appearance: none;
+  flex: 0 0 auto;
+  width: toRem(24);
+  height: toRem(24);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  background-color: $color-white;
+  border: 1px solid $color-grey-1;
+  border-radius: toRem(4);
+  margin-right: toRem(8);
+
+  &:checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%) rotate(45deg);
+      width: toRem(6);
+      height: toRem(12);
+      border: solid $color-white;
+      border-width: 0 toRem(2) toRem(2) 0;
+    }
+  }
+}
+
+@include media-width-down('xl') {
+  .join-us {
+    padding: $content-padding-xl;
+    &__text{
+      &--paragraph{
+        padding-bottom: toRem(25);
+        &::after {
+          bottom: toRem(12);
+        }
+      }
+    }
+  }
+}
+
+@include media-width-down('lg') {
+  .join-us {
+    padding: $content-padding-lg;
+    &__box{
+      flex-direction: column;
+    }
+    &__text {
+      width: 92%;
+      padding: toRem(20);
+      &--paragraph{
+        padding-bottom: toRem(25);
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__form{
+      width: 92%;
+      padding: toRem(20);
+    }
+  }
+}
+
+@include media-width-down('sm') {
+  .join-us {
+    &__form {
+      &--item{
+        display: flex;
+        flex-direction: column;
+      }
+      &--label{
+        width: 90%;
+        text-align: left;
+        padding-bottom: toRem(10);
+        &--message{
+          width: 90%;
+          align-self: unset;
+          padding-top: 0;
+        }
+      }
+      &--input{
+        width: 85%;
+      }
+      &--check {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}

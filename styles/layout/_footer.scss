@@ -1,0 +1,107 @@
+.footer {
+  position: relative;
+  padding: toRem(120) toRem(120) toRem(100) toRem(120);
+
+  &__box{
+    display: flex;
+  }
+  &__logo{
+    width: 36%;
+    padding-right: toRem(25);
+
+    &--img{
+      padding-bottom: toRem(16);
+    }
+    &--text{
+      padding-bottom: toRem(24);
+    }
+    &--social{
+      display: flex;
+      gap: toRem(24);
+      &--img{
+        width: toRem(32);
+        height: toRem(32);
+      }
+    }
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    width: 64%;
+    gap: $gap-large;
+    padding-left: toRem(25);
+
+    &--item{
+      &--text{
+        padding-bottom: toRem(24);
+      }
+      &--content{
+        display: flex;
+        flex-direction: column;
+        gap: $gap-medium;
+      }
+      &--content a {
+        color: $color-grey-2;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+@include media-width-down('xl') {
+  .footer {
+    padding: toRem(100) toRem(40);
+  }
+}
+
+@include media-width-down('lg') {
+  .footer {
+    padding: toRem(50) toRem(20);
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo{
+      width: unset;
+      &--text{
+        width: 50%;
+      }
+    }
+    &__nav{
+      flex-direction: column;
+      justify-content: end;
+      width: unset;
+      gap: toRem(12);
+
+      &--item{
+        &--content{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include media-width-down('md') {
+  .footer {
+    &__logo{
+      &--text{
+        display: none;
+      }
+    }
+  }
+}

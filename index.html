@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Houter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background-blur background-blur--header blur--green-blue"></div>
+
+<header class="header">
+    <div class="header__logo">
+        <img class="logo__box" src="./assets/icons/logos/hounter-logo.svg" alt="Hounter logo" loading="lazy"/>
+    </div>
+
+    <nav class="header__nav-box">
+        <a href="#" class="btn btn--white btn-font">About us</a>
+        <a href="#" class="btn btn--white btn-font">Article</a>
+
+        <div class="btn btn--select btn--white btn-font">
+            <div class="btn--select__text">Property</div>
+            <ul class="btn--select__list btn--white">
+                <li><a href="#">House</a></li>
+                <li><a href="#">Apartment</a></li>
+                <li><a href="#">Villa</a></li>
+            </ul>
+        </div>
+
+        <a href="#" class="btn btn--outline btn--outline--bg-border btn-font">Sing up</a>
+    </nav>
+
+    <!-- Burger Menu Button -->
+    <div class="header__burger">
+        <div class="header__burger-line"></div>
+        <div class="header__burger-line"></div>
+        <div class="header__burger-line"></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="header__mobile-menu">
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">Property</a></li>
+            <li><a href="#" class="btn btn--outline btn--outline--bg-border btn-font">Sing up</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+
+        <div class="cookie-banner" id="cookieBanner">
+            <p class="cookie-text body-semibold body-semibold--primary-dark">We are using cookies</p>
+            <button class="cookie-close" id="cookieClose"></button>
+        </div>
+
+    <section class="introduction">
+        <div class="introduction__box">
+            <div class="introduction__box__text">
+                <h1 class="heading-1">Find The Place To Live <span>Your Dreams</span> Easily Here</h1>
+                <h2 class="body-light m-25-0">Everything you need about finding your place to live will be
+                    here, where it will be easier for you</h2>
+
+                <div class="input">
+                    <label class="input--label search-input">
+                        <input type="text" class="input-font" placeholder="Search for the location you want!"/>
+                    </label>
+                    <button class="btn btn--filled btn-font btn--filled--search">Search</button>
+                </div>
+
+                <h2 class="body-light">Our Partnership</h2>
+                <div class="partners">
+                    <img src="./assets/icons/logos/traveloka-logo.svg" alt="Traveloka logo" loading="lazy"/>
+                    <img src="./assets/icons/logos/tiketcom-logo.svg" alt="Tiketcom logo" loading="lazy"/>
+                    <img src="./assets/icons/logos/airbnb-logo.svg" alt="Airbnb logo" loading="lazy"/>
+                    <img src="./assets/icons/logos/tripadvisor-logo.svg" alt="Tripadvisor logo" loading="lazy"/>
+                </div>
+            </div>
+        </div>
+        <div class="introduction__img">
+            <img class="introduction__img--main" src="./assets/images/house-1.png" alt="House picture"/>
+            <div class="introduction__scroll">
+                <div class="introduction__scroll__item">
+                    <div class="introduction__scroll__item__stack introduction__scroll__item__stack--multiple">
+                        <img
+                                class="introduction__scroll__item__stack__picture"
+                                src="./assets/images/avatar-1.png"
+                                alt="Buyer 1"
+                                loading="lazy"
+                        />
+                        <img
+                                class="introduction__scroll__item__stack__picture"
+                                src="./assets/images/avatar-2.png"
+                                alt="Buyer 2"
+                                loading="lazy"
+                        />
+                        <img
+                                class="introduction__scroll__item__stack__picture"
+                                src="./assets/images/avatar-3.png"
+                                alt="Buyer 3"
+                                loading="lazy"
+                        />
+                    </div>
+                    <div class="introduction__scroll__item__text">
+                        <h3 class="body-semibold body-semibold--black">1K+ People</h3>
+                        <h4 class="label-small">Successfully Getting Home</h4>
+                    </div>
+                </div>
+
+                <div class="introduction__scroll__item">
+                    <div class="introduction__scroll__item__stack">
+                        <img
+                                class="introduction__scroll__item__stack__picture"
+                                src="./assets/images/house-2.png"
+                                alt="House picture"
+                                loading="lazy"
+                        />
+                    </div>
+                    <div class="introduction__scroll__item__text">
+                        <h3 class="body-semibold body-semibold--black">56 Houses</h3>
+                        <h4 class="label-small">Sold Monthly</h4>
+                    </div>
+                </div>
+
+                <div class="introduction__scroll__item">
+                    <div class="introduction__scroll__item__stack">
+                        <img
+                                class="introduction__scroll__item__stack__picture"
+                                src="./assets/images/avatar-4.png"
+                                alt="Buyer 1"
+                                loading="lazy"
+                        />
+                    </div>
+                    <div class="introduction__scroll__item__text">
+                        <h3 class="body-semibold body-semibold--black">4K+</h3>
+                        <h4 class="label-small">People Looking for New Homes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="featured__box">
+            <div class="featured__box__label label-regular label-regular--secondary">Our Recommendation</div>
+
+            <div class="featured__box__panel">
+                <h2 class="featured__box__title heading-2">Featured House</h2>
+
+                <div class="featured__box__panel--buttons">
+                    <button class="btn btn--outline btn--outline--bg btn--img-before--house btn-font">
+                        <span class="btn__text">House</span>
+                    </button>
+                    <button class="btn btn--outline btn--outline--border btn--img-before--villa btn-font">
+                        <span class="btn__text">Villa</span>
+                    </button>
+                    <button class="btn btn--outline btn--outline--border btn--img-before--apartment btn-font">
+                        <span class="btn__text">Apartment</span>
+                    </button>
+                </div>
+
+                <div class="featured__box__panel--nav">
+                    <button class="btn btn--outline btn--outline--border btn--nav btn--nav--back"></button>
+                    <button class="btn btn--filled btn--nav"></button>
+                </div>
+            </div>
+
+            <!-- SLIDER CONTAINER -->
+            <div class="featured__slider">
+                <div class="featured__box__elements">
+                    <!-- Slider Item 1 -->
+                    <div class="featured__box__item">
+                        <div class="featured__box__item--img">
+                            <img src="./assets/images/house-3.png" alt="Roselands House" loading="lazy"/>
+                            <div class="featured__box__item--img--label featured__box__item--img--label--fire label-medium--red">
+                                Popular
+                            </div>
+                        </div>
+                        <h3 class="featured__box__item--title heading-3">Roselands House</h3>
+                        <h4 class="featured__box__item--price heading-4-5-6 heading-4-5-6--grey-3">$ 35.000.000</h4>
+                        <div class="person">
+                            <div class="person__avatar">
+                                <img src="./assets/images/avatar-5.png" alt="Avatar" loading="lazy"/>
+                            </div>
+                            <div class="person__data">
+                                <div class="person__name subtitle">Dianne Russell</div>
+                                <div class="person__location label-regular label-regular--grey-2">
+                                    Manchester, Kentucky
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Item 2 -->
+                    <div class="featured__box__item">
+                        <div class="featured__box__item--img">
+                            <img src="./assets/images/house-4.png" alt="Woodlandside" loading="lazy"/>
+                            <div class="featured__box__item--img--label featured__box__item--img--label--house label-medium--blue">
+                                New house
+                            </div>
+                        </div>
+                        <h3 class="featured__box__item--title heading-3">Woodlandside</h3>
+                        <h4 class="featured__box__item--price heading-4-5-6 heading-4-5-6--grey-3">$ 20.000.000</h4>
+                        <div class="person">
+                            <div class="person__avatar">
+                                <img src="./assets/images/avatar-6.png" alt="Avatar" loading="lazy"/>
+                            </div>
+                            <div class="person__data">
+                                <div class="person__name subtitle">Robert Fox</div>
+                                <div class="person__location label-regular label-regular--grey-2">
+                                    Dr. San Jose, South Dakota
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Item 3 -->
+                    <div class="featured__box__item">
+                        <div class="featured__box__item--img">
+                            <img src="./assets/images/house-5.png" alt="The Old Lighthouse" loading="lazy"/>
+                            <div class="featured__box__item--img--label featured__box__item--img--label--wallet label-medium--green">
+                                Best deals
+                            </div>
+                        </div>
+                        <h3 class="featured__box__item--title heading-3">The Old Lighthouse</h3>
+                        <h4 class="featured__box__item--price heading-4-5-6 heading-4-5-6--grey-3">$ 44.000.000</h4>
+                        <div class="person">
+                            <div class="person__avatar">
+                                <img src="./assets/images/avatar-7.png" alt="Avatar" loading="lazy"/>
+                            </div>
+                            <div class="person__data">
+                                <div class="person__name subtitle">Ronald Richards</div>
+                                <div class="person__location label-regular label-regular--grey-2">
+                                    Santa Ana, Illinois
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Item 4 -->
+                    <div class="featured__box__item">
+                        <div class="featured__box__item--img">
+                            <img src="./assets/images/house-6.png" alt="Cosmo's House" loading="lazy"/>
+                            <div class="featured__box__item--img--label featured__box__item--img--label--fire label-medium--red">
+                                Popular
+                            </div>
+                        </div>
+                        <h3 class="featured__box__item--title heading-3">Cosmo's House</h3>
+                        <h4 class="featured__box__item--price heading-4-5-6 heading-4-5-6--grey-3">$ 22.000.000</h4>
+                        <div class="person">
+                            <div class="person__avatar">
+                                <img src="./assets/images/avatar-3.png" alt="Avatar" loading="lazy"/>
+                            </div>
+                            <div class="person__data">
+                                <div class="person__name subtitle">Jenny Wilson</div>
+                                <div class="person__location label-regular label-regular--grey-2">
+                                    Preston Rd. Inglewood, Maine 98380
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tour">
+        <div class="tour__box">
+            <div class="tour__box__label label-regular label-regular--secondary">Ready to Sell!</div>
+            <h2 class="tour__box__title heading-2">Let’s tour and see our house!</h2>
+            <h2 class="body-light m-25-0">Houses recommended by our partners that have been curated to become the home
+                of your dreams!</h2>
+            <div class="tour__detail">
+                <h3 class="body-semibold body-semibold--black">House Detail</h3>
+                <div class="tour__detail__items m-25-0">
+                    <div class="tour__detail__items-first">
+                        <div class="tour__detail__item tour__detail__item--bedroom mb-16 body-medium">4 Bedrooms</div>
+                        <div class="tour__detail__item tour__detail__item--carport body-medium">1 Carport</div>
+                    </div>
+                    <div class="tour__detail__items-second">
+                        <div class="tour__detail__item tour__detail__item--bathroom mb-16 body-medium">2 Bathrooms</div>
+                        <div class="tour__detail__item tour__detail__item--floors body-medium">2 Floors</div>
+                    </div>
+                </div>
+                <div class="tour__realtor">
+                    <div class="tour__realtor__content">
+                        <div class="person">
+                            <div class="person__avatar">
+                                <img src="./assets/images/avatar-5.png" alt="Avatar" loading="lazy"/>
+                            </div>
+                            <div class="person__data">
+                                <div class="person__name subtitle">Dianne Russell</div>
+                                <div class="person__location label-regular label-regular--grey-2">
+                                    Manchester, Kentucky
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn--filled btn-font btn--img-before--contact">Contact now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tour__pictures">
+            <div class="tour__pictures--main">
+                <img src="./assets/images/house-7-tour.png" alt="House for sale" loading="lazy"/>
+            </div>
+            <img src="./assets/images/house-7-tour-1.png" alt="House for sale - furniture" loading="lazy"/>
+            <img src="./assets/images/house-7-tour-2.png" alt="House for sale - furniture" loading="lazy"/>
+            <img src="./assets/images/house-7-tour-3.png" alt="House for sale - furniture" loading="lazy"/>
+        </div>
+
+        <div class="background-blur background-blur--tour blur--yellow-orange"></div>
+    </section>
+    <section class="review">
+        <div class="review__box">
+            <div class="review__box__label label-regular label-regular--secondary">See Our Review</div>
+            <h2 class="review__box__title heading-2">What Our User Say About Us</h2>
+            <div class="review__slider">
+                <div class="review__slider__track">
+                    <div class="review__slider__item">
+                        <img class="review__slider__item--img" src="./assets/images/house-8.png" alt="House for review"
+                             loading="lazy"/>
+                        <div class="review__slider__item__card">
+                            <h4 class="review__slider__item__card__title heading-4-5-6 heading-4-5-6--black">My house
+                                sold
+                                out fast!
+                            </h4>
+                            <div class="review__slider__item__card__text label-regular label-regular--grey-3">I was
+                                finally
+                                able to
+                                sell my house quickly through Hounter by immediately setting me up with people who
+                                wanted my house. I also do not get a discount from the sale of my house. Awesome!
+                            </div>
+                            <div class="review__slider__item__card__author">
+                                <div class="person">
+                                    <div class="person__avatar">
+                                        <img src="./assets/images/avatar-5.png" alt="Avatar" loading="lazy"/>
+                                    </div>
+                                    <div class="person__data">
+                                        <div class="person__name body-semibold body-semibold--black">Dianne Russell
+                                        </div>
+                                        <div class="person__location label-small">Manchester, Kentucky</div>
+                                    </div>
+                                </div>
+                                <h5 class="review__slider__item__card__rate heading-4-5-6 heading-4-5-6--black">4.3</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review__slider__item">
+                        <img class="review__slider__item--img" src="./assets/images/house-9.png" alt="House for review"
+                             loading="lazy"/>
+                        <div class="review__slider__item__card">
+                            <h4 class="review__slider__item__card__title heading-4-5-6 heading-4-5-6--black">Best! I got
+                                the house I wanted through Hounter</h4>
+                            <div class="review__slider__item__card__text label-regular label-regular--grey-3">Through
+                                this website I can get a house with the type and specifications I want very easily,
+                                without a complicated process to be able to find information on the house we want.
+                            </div>
+                            <div class="review__slider__item__card__author">
+                                <div class="person">
+                                    <div class="person__avatar">
+                                        <img src="./assets/images/avatar-3.png" alt="Avatar" loading="lazy"/>
+                                    </div>
+                                    <div class="person__data">
+                                        <div class="person__name body-semibold body-semibold--black">Jenny Wilson</div>
+                                        <div class="person__location label-small">Manager Director</div>
+                                    </div>
+                                </div>
+                                <h5 class="review__slider__item__card__rate heading-4-5-6 heading-4-5-6--black">4.6</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review__slider__item">
+                        <img class="review__slider__item--img" src="./assets/images/house-10.png" alt="House for review"
+                             loading="lazy"/>
+                        <div class="review__slider__item__card">
+                            <h4 class="review__slider__item__card__title heading-4-5-6 heading-4-5-6--black">Through the
+                                Hounter, I can get a house for my self</h4>
+                            <div class="review__slider__item__card__text label-regular label-regular--grey-3">By looking
+                                for information about what kind of house we want, we managed to get the house we wanted
+                                very quickly, and directly connected with the seller to be able to ask about the
+                                details, very helpful!
+                            </div>
+                            <div class="review__slider__item__card__author">
+                                <div class="person">
+                                    <div class="person__avatar">
+                                        <img src="./assets/images/avatar-7.png" alt="Avatar" loading="lazy"/>
+                                    </div>
+                                    <div class="person__data">
+                                        <div class="person__name body-semibold body-semibold--black">Ronald Richards
+                                        </div>
+                                        <div class="person__location label-small">Head of Marketing</div>
+                                    </div>
+                                </div>
+                                <h5 class="review__slider__item__card__rate heading-4-5-6 heading-4-5-6--black">4.6</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review__slider__dots">
+                    <div class="review__slider__dots__dot" data-index="0"></div>
+                    <div class="review__slider__dots__dot review__slider__dots__dot--active" data-index="1"></div>
+                    <div class="review__slider__dots__dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="find-more">
+        <div class="background-blur background-blur--find-more blur--green-yellow"></div>
+
+        <div class="find-more__box">
+            <div class="find-more__heading">
+                <div class="find-more__heading__label label-regular label-regular--secondary">See tips and trick from
+                    our partnership
+                </div>
+                <h2 class="find-more__heading__title heading-2">Find out more about selling and buying homes</h2>
+                <button class="btn btn--filled btn-font find-more__heading__button" id="more-articles-btn">More
+                    articles
+                </button>
+            </div>
+
+            <div class="articles">
+
+                <div class="articles__preview">
+                    <article class="article article--preview">
+                        <img class="article--preview__img" src="./assets/images/house-11.png" alt="Article Image"
+                             loading="lazy"/>
+                        <div class="article__info article__info--padding">
+                            <div class="article__person">
+                                <img src="./assets/images/avatar-3.png" alt="Avatar" loading="lazy"/>
+                                <div class="article__person--name label-regular label-regular--grey-3">Dianne Russell
+                                </div>
+                            </div>
+                            <h3 class="article__title subtitle">The things we need to check when we want to buy a
+                                house</h3>
+                            <div class="article__text body-light">Considering buying a home but feeling overwhelmed by
+                                the process? In this guide, we break down the key steps and essential tips you need to
+                                know when searching for your dream house.
+                            </div>
+                            <div class="article__date label-regular label-regular--grey-2">4 min read | 25 Apr 2021
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article article--preview">
+                        <img class="article--preview__img" src="./assets/images/house-12.png" alt="Article Image"
+                             loading="lazy"/>
+                        <div class="article__info article__info--padding">
+                            <div class="article__person">
+                                <img src="./assets/images/avatar-8.png" alt="Avatar" loading="lazy"/>
+                                <div class="article__person--name label-regular label-regular--grey-3">Courtney Henry
+                                </div>
+                            </div>
+                            <h3 class="article__title subtitle">7 Ways to distinguish the quality of the house we want
+                                to buy</h3>
+                            <div class="article__text body-light">Navigating the real estate market can be daunting. Our
+                                comprehensive guide provides step-by-step insights and essential tips to help you find
+                                the perfect home.
+                            </div>
+                            <div class="article__date label-regular label-regular--grey-2">6 min read | 24 Apr 2021
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article article--preview">
+                        <img class="article--preview__img" src="./assets/images/house-10.png" alt="Article Image"
+                             loading="lazy"/>
+                        <div class="article__info article__info--padding">
+                            <div class="article__person">
+                                <img src="./assets/images/avatar-9.png" alt="Avatar" loading="lazy"/>
+                                <div class="article__person--name label-regular label-regular--grey-3">Darlene
+                                    Robertson
+                                </div>
+                            </div>
+                            <h3 class="article__title subtitle">The best way to know the quality of the house we want to
+                                buy</h3>
+                            <div class="article__text body-light">Embarking on a home buying journey? Learn the critical
+                                factors to consider—from location and financing to inspection and closing—ensuring a
+                                smooth transition.
+                            </div>
+                            <div class="article__date label-regular label-regular--grey-2">2 min read | 24 Apr 2021
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <article class="article">
+                    <img class="article__img" src="./assets/images/house-13.png" alt="Article Image"
+                         loading="lazy"/>
+                    <div class="article__info">
+                        <div class="article__person">
+                            <img src="./assets/images/avatar-10.png" alt="Avatar" loading="lazy"/>
+                            <div class="article__person--name label-regular label-regular--grey-3">Cameron
+                                Williamson
+                            </div>
+                        </div>
+                        <h3 class="article__title heading-3">12 Things to know before buying a house</h3>
+                        <div class="article__text body-light">Want to buy a house but are unsure about what we
+                            should know, here I will try to explain what we should know and check when we want to
+                            buy a house
+                        </div>
+                        <div class="article__date label-regular label-regular--grey-2">8 min read | 25 Apr 2021
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <template id="extra-articles-template">
+                <article class="article article--preview">
+                    <img class="article--preview__img" src="./assets/images/house-11.png" alt="Article Image"
+                         loading="lazy"/>
+                    <div class="article__info article__info--padding">
+                        <div class="article__person">
+                            <img src="./assets/images/avatar-3.png" alt="Avatar" loading="lazy"/>
+                            <div class="article__person--name label-regular label-regular--grey-3">Dianne Russell</div>
+                        </div>
+                        <h3 class="article__title subtitle">The things we need to check when we want to buy a house</h3>
+                        <div class="article__text body-light">Considering buying a home but feeling overwhelmed by the
+                            process? In this guide, we break down the key steps and essential tips you need to know when
+                            searching for your dream house.
+                        </div>
+                        <div class="article__date label-regular label-regular--grey-2">4 min read | 25 Apr 2021</div>
+                    </div>
+                </article>
+                <article class="article article--preview">
+                    <img class="article--preview__img" src="./assets/images/house-12.png" alt="Article Image"
+                         loading="lazy"/>
+                    <div class="article__info article__info--padding">
+                        <div class="article__person">
+                            <img src="./assets/images/avatar-8.png" alt="Avatar" loading="lazy"/>
+                            <div class="article__person--name label-regular label-regular--grey-3">Courtney Henry</div>
+                        </div>
+                        <h3 class="article__title subtitle">7 Ways to distinguish the quality of the house we want to
+                            buy</h3>
+                        <div class="article__text body-light">Navigating the real estate market can be daunting. Our
+                            comprehensive guide provides step-by-step insights and essential tips to help you find the
+                            perfect home.
+                        </div>
+                        <div class="article__date label-regular label-regular--grey-2">6 min read | 24 Apr 2021</div>
+                    </div>
+                </article>
+                <article class="article article--preview">
+                    <img class="article--preview__img" src="./assets/images/house-10.png" alt="Article Image"
+                         loading="lazy"/>
+                    <div class="article__info article__info--padding">
+                        <div class="article__person">
+                            <img src="./assets/images/avatar-9.png" alt="Avatar" loading="lazy"/>
+                            <div class="article__person--name label-regular label-regular--grey-3">Darlene Robertson
+                            </div>
+                        </div>
+                        <h3 class="article__title subtitle">The best way to know the quality of the house we want to
+                            buy</h3>
+                        <div class="article__text body-light">Embarking on a home buying journey? Learn the critical
+                            factors to consider—from location and financing to inspection and closing—ensuring a smooth
+                            transition.
+                        </div>
+                        <div class="article__date label-regular label-regular--grey-2">2 min read | 24 Apr 2021</div>
+                    </div>
+                </article>
+                <article class="article article--preview">
+                    <img class="article--preview__img" src="./assets/images/house-11.png" alt="Article Image"
+                         loading="lazy"/>
+                    <div class="article__info article__info--padding">
+                        <div class="article__person">
+                            <img src="./assets/images/avatar-3.png" alt="Avatar" loading="lazy"/>
+                            <div class="article__person--name label-regular label-regular--grey-3">Dianne Russell</div>
+                        </div>
+                        <h3 class="article__title subtitle">The things we need to check when we want to buy a house</h3>
+                        <div class="article__text body-light">Considering buying a home but feeling overwhelmed by the
+                            process? In this guide, we break down the key steps and essential tips you need to know when
+                            searching for your dream house.
+                        </div>
+                        <div class="article__date label-regular label-regular--grey-2">4 min read | 25 Apr 2021</div>
+                    </div>
+                </article>
+                <article class="article article--preview">
+                    <img class="article--preview__img" src="./assets/images/house-12.png" alt="Article Image"
+                         loading="lazy"/>
+                    <div class="article__info article__info--padding">
+                        <div class="article__person">
+                            <img src="./assets/images/avatar-8.png" alt="Avatar" loading="lazy"/>
+                            <div class="article__person--name label-regular label-regular--grey-3">Courtney Henry</div>
+                        </div>
+                        <h3 class="article__title subtitle">7 Ways to distinguish the quality of the house we want to
+                            buy</h3>
+                        <div class="article__text body-light">Navigating the real estate market can be daunting. Our
+                            comprehensive guide provides step-by-step insights and essential tips to help you find the
+                            perfect home.
+                        </div>
+                        <div class="article__date label-regular label-regular--grey-2">6 min read | 24 Apr 2021</div>
+                    </div>
+                </article>
+            </template>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="subscribe__box">
+            <div class="subscribe__content">
+                <h2 class="subscribe__content--text heading-2">Subscribe For More Info And Update From Hounter</h2>
+                <div class="input subscribe-input">
+                    <input type="email" id="email" class="input-font" placeholder="Your email here"
+                           aria-label="Email Address"/>
+                    <button class="btn btn--filled btn-font">Subscribe Now</button>
+                </div>
+            </div>
+            <div class="subscribe__decor">
+                <img src="assets/images/furniture-1.png" alt="Furniture image" class="decor decor--1">
+                <img src="assets/images/avatar-6.png" alt="Person avatar" class="decor decor--2">
+                <img src="assets/images/avatar-3.png" alt="Person avatar" class="decor decor--3">
+                <img src="assets/images/house-14.png" alt="House image" class="decor decor--4">
+                <img src="assets/images/house-15.png" alt="House image" class="decor decor--5">
+                <img src="assets/images/avatar-11.png" alt="Person avatar" class="decor decor--6">
+                <img src="assets/images/avatar-8.png" alt="Person avatar" class="decor decor--7">
+                <img src="assets/images/furniture-2.png" alt="Furniture image" class="decor decor--8">
+            </div>
+        </div>
+    </section>
+        <section class="join-us">
+            <div class="join-us__box">
+                <div class="join-us__text">
+                    <h3 class="join-us__text--title heading-3">Would you like to join?</h3>
+                    <p class="join-us__text--paragraph body-light">Quickly get three quotes from these local that people
+                        love in online reviews.</p>
+                    <p class="join-us__text--paragraph body-light">Pick the whose estimate suits you best.</p>
+                    <p class="join-us__text--paragraph-last body-light">We then make sure the work i done to your complete
+                        satisfaction.</p>
+                </div>
+                <form class="join-us__form">
+                    <div class="join-us__form--item">
+                        <label for="input-name" class="join-us__form--label">Name</label>
+                        <input type="text" id="input-name" class="input-font join-us__form--input" placeholder="Your name"/>
+                    </div>
+                    <div class="join-us__form--item">
+                        <label for="input-surname" class="join-us__form--label">Surname</label>
+                        <input type="text" id="input-surname" class="input-font join-us__form--input" placeholder="Your surname"/>
+                    </div>
+                    <div class="join-us__form--item">
+                        <div class="join-us__form--label">Education</div>
+                        <div class="custom-select input-font">
+                            <div class="custom-select__trigger">Select One</div>
+                            <ul class="custom-select__options">
+                                <li data-value="1">Option 1</li>
+                                <li data-value="2">Option 2</li>
+                                <li data-value="3">Option 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="join-us__form--item">
+                        <label for="message-text" class="join-us__form--label join-us__form--label--message">Message</label>
+                        <textarea id="message-text" class="input-font join-us__form--input" placeholder="Message"
+                                  rows="5"></textarea>
+                        <span id="textarea-char-count" class="textarea-char-count input-font">0/500</span>
+                    </div>
+                    <div class="join-us__form--check">
+                        <input type="checkbox" class="custom-checkbox" id="agree" name="agree">
+                        <label for="agree" class="label-regular label-regular--grey-3">I give consent to the processing of
+                            my personal data given in the contact form above under the terms and conditions of Grid Dynamics
+                            Privacy Policy.</label>
+                    </div>
+                </form>
+            </div>
+        </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__box">
+        <div class="footer__logo">
+            <img class="footer__logo--img" src="./assets/icons/logos/hounter-logo.svg" alt="Hounter logo"
+                 loading="lazy"/>
+            <div class="footer__logo--text label-regular label-regular--grey-3">We provide information about properties
+                such as houses, villas and apartments to help people find their dream home
+            </div>
+            <div class="footer__logo--social">
+                <a href="#">
+                    <img class="footer__logo--social--img" src="./assets/icons/social/FB.svg" alt="Facebook logo">
+                </a>
+                <a href="#">
+                    <img class="footer__logo--social--img" src="./assets/icons/social/TW.svg" alt="Tweeter logo">
+                </a>
+                <a href="#">
+                    <img class="footer__logo--social--img" src="./assets/icons/social/PIN.svg" alt="Pinterest logo">
+                </a>
+            </div>
+        </div>
+        <nav class="footer__nav">
+            <div class="footer__nav--item">
+                <a href="#" class="footer__nav--item--text subtitle">Property</a>
+                <ul class="footer__nav--item--content label-regular label-regular--grey-2">
+                    <li><a href="#">House</a></li>
+                    <li><a href="#">Apartment</a></li>
+                    <li><a href="#">Villa</a></li>
+                </ul>
+            </div>
+            <div class="footer__nav--item">
+                <a href="#" class="footer__nav--item--text subtitle">Article</a>
+                <ul class="footer__nav--item--content label-regular label-regular--grey-2">
+                    <li><a href="#">New Article</a></li>
+                    <li><a href="#">Popular Article</a></li>
+                    <li><a href="#">Most Read</a></li>
+                    <li><a href="#">Tips & Tricks</a></li>
+                </ul>
+            </div>
+            <div class="footer__nav--item">
+                <a href="#" class="footer__nav--item--text subtitle">Contact</a>
+                <div class="footer__nav--item--content label-regular label-regular--grey-2">
+                    <div>2464 Royal Ln. Mesa, New Jersey 45463</div>
+                    <div>(671) 555-0110</div>
+                    <div>info@hounter.com</div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="background-blur background-blur--footer blur--yellow-blue"></div>
+</footer>
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>

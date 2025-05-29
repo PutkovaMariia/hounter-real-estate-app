@@ -1,0 +1,158 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: toRem(126);
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  &__logo {
+    cursor: pointer;
+    padding-left: toRem(124);
+  }
+
+  &__nav-box {
+    display: flex;
+    align-items: center;
+    gap: toRem(24);
+    padding-right: toRem(124);
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary-light;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1100;
+    width: toRem(40);
+    height: toRem(40);
+    padding: toRem(5);
+    margin-right: toRem(20);
+
+    &-line {
+      width: toRem(25);
+      height: toRem(3);
+      background-color: $color-primary;
+      transition: 0.3s;
+    }
+
+    &-line:nth-child(1) {
+      margin-bottom: toRem(5);
+    }
+
+    &-line:nth-child(3) {
+      margin-top: toRem(5);
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: $color-primary-light;
+    transition: right 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(24);
+    z-index: 1000;
+
+    &.active {
+      right: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    li {
+      margin: toRem(20) 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-black;
+      font-family: $font-lexend;
+      font-size: toRem(14);
+      font-weight: 600;
+      line-height: toRem(17.5);
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+@include media-width-down('xl') {
+  .header {
+    &__logo {
+      padding-left: toRem(40);
+    }
+
+    &__nav-box {
+      padding-right: toRem(40);
+     justify-content: center;
+    }
+  }
+}
+
+@include media-width-down('lg') {
+  .header {
+    height: toRem(90);
+
+    &__logo {
+      padding-left: toRem(20);
+    }
+
+    &__nav-box {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+    }
+
+    &__burger.active {
+
+      .header__burger-line:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .header__burger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .header__burger-line:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+
+    &__mobile-menu {
+      display: none;
+    }
+
+    &__mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__mobile-menu.active {
+      display: flex;
+    }
+  }
+}

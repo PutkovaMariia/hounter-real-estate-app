@@ -1,0 +1,21 @@
+@mixin iconAfter($maskUrl, $margin: toRem(8)) {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: toRem(24);
+  height: toRem(24);
+  margin-left: $margin;
+  background-color: currentColor;
+  mask: url($maskUrl) center/contain no-repeat;
+}
+
+@mixin iconBefore($maskUrl, $margin: toRem(8)) {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: toRem(24);
+  height: toRem(24);
+  margin-right: $margin;
+  background-color: currentColor;
+  mask: url($maskUrl) center/contain no-repeat;
+}

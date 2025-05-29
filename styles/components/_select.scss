@@ -1,0 +1,83 @@
+.custom-select {
+  position: relative;
+  flex: 1;
+
+  &__trigger {
+    padding: toRem(16) toRem(24);
+    border: 1px solid $color-grey-1;
+    outline: none;
+    border-radius: toRem(28);
+    position: relative;
+    z-index: 11;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: toRem(24);
+      height: toRem(24);
+      top: toRem(16);
+      right: toRem(24);
+
+      background-color: currentColor;
+      mask-image: url("../../assets/icons/arrow.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+
+      transform: rotate(90deg);
+      transition: transform 0.3s ease-in-out;
+      transform-origin: center;
+      display: inline-block;
+    }
+
+    &--active::after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__options {
+    margin-top: -(toRem(30));
+    padding: toRem(30) 0 0 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid $color-grey-1;
+    background-color: $color-white;
+    border-bottom-left-radius: toRem(28);
+    border-bottom-right-radius: toRem(28);
+    border-top: none;
+    z-index: 10;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    li {
+      display: block;
+      padding: toRem(16) toRem(24);
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: toRem(20);
+      &:hover {
+        background: $color-primary-light;
+      }
+    }
+  }
+
+  &.open {
+    .custom-select__options {
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+  }
+}
+
+@include media-width-down('sm') {
+  .custom-select {
+    width: 100%;
+    &__trigger {
+      z-index: 11;
+    }
+  }
+}

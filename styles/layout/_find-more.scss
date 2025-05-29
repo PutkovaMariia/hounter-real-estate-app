@@ -1,0 +1,195 @@
+.find-more {
+  padding: $content-padding;
+  position: relative;
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: toRem(50);
+
+    &__label {
+      padding-bottom: toRem(6);
+      position: relative;
+      &::before {
+        position: absolute;
+        top: -(toRem(10));
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        width: toRem(32);
+        height: toRem(1);
+        background-color: currentColor;
+      }
+    }
+
+    &__title {
+      padding-bottom: toRem(16);
+    }
+  }
+}
+
+.articles {
+  display: flex;
+  width: 100%;
+  gap: $gap-large;
+  text-align: center;
+
+  &__preview {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-large;
+    width: 50%;
+  }
+
+  .article {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    text-align: left;
+
+    &__img {
+      border-radius: toRem(16);
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      margin-bottom: toRem(25);
+    }
+
+    &__info {
+      padding: 0;
+      &--padding {
+        padding: toRem(8) 0;
+      }
+    }
+
+    &__person {
+      display: flex;
+      align-items: center;
+      padding-bottom: toRem(12);
+      img {
+        margin-right: toRem(16);
+        border-radius: 50%;
+        overflow: hidden;
+        height: toRem(32);
+        width: toRem(32);
+      }
+    }
+
+    &__title {
+      text-align: left;
+      padding-bottom: toRem(12);
+    }
+
+    &__text {
+      display: none;
+      padding-bottom: toRem(16);
+    }
+
+    &__date {
+      text-align: left;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        @include iconBefore("../../assets/icons/clock.png", toRem(12));
+      }
+    }
+
+    &--preview {
+      width: 100%;
+      display: flex;
+      gap: $gap-large;
+      aspect-ratio: 18 / 5;
+      overflow: hidden;
+      &__img {
+        border-radius: toRem(16);
+        width: 35%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      &__person {
+        display: flex;
+        align-items: center;
+        padding-bottom: toRem(12);
+        img {
+          margin-right: toRem(16);
+          border-radius: 50%;
+          overflow: hidden;
+          height: toRem(32);
+          width: toRem(32);
+        }
+      }
+      &__title {
+        padding-bottom: toRem(12);
+        text-align: left;
+      }
+    }
+  }
+}
+
+.article:not(.article--preview) .article__text {
+  display: block;
+}
+
+@include media-width-down('xl') {
+  .find-more {
+    padding: $content-padding-xl;
+  }
+  .articles {
+    &__preview {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-large;
+      width: 100%;
+    }
+  }
+  .articles > article:not(.article--preview) {
+    display: none;
+  }
+}
+
+@include media-width-down('lg') {
+  .find-more {
+    padding: $content-padding-lg;
+    &__heading {
+      padding-bottom: toRem(20);
+    }
+  }
+}
+
+@include media-width-down('sm') {
+  .articles {
+    &__preview {
+      gap: toRem(10);
+    }
+    .article {
+      &__info {
+        &--padding {
+          padding: 0 0 0 toRem(10);
+        }
+      }
+      &--preview {
+        padding-bottom: toRem(20);
+        gap: 0;
+        &__person {
+          padding-bottom: toRem(6);
+          img {
+            margin-right: toRem(8);
+            height: toRem(24);
+            width: toRem(24);
+          }
+        }
+        &__title {
+          padding-bottom: toRem(6);
+        }
+      }
+      &__date {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  border-radius: toRem(28);
+  border: 1px solid $color-grey-1;
+  background-color: $color-white;
+  margin: toRem(32) 0;
+  height: toRem(56);
+
+  label {
+    margin-left: toRem(30);
+    flex-grow: 1;
+    display: flex;
+  }
+
+  input {
+    flex-grow: 1;
+    width: 100%;
+    padding: toRem(16) toRem(28);
+    border: none;
+    outline: none;
+    border-radius: toRem(28);
+  }
+}

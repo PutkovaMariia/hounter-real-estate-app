@@ -1,0 +1,180 @@
+.tour {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: $content-padding;
+
+  &__box {
+    width: 45%;
+
+    &__label {
+      display: block;
+      width: 100%;
+      padding-bottom: toRem(8);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -(toRem(40));
+        top: toRem(10);
+        content: "";
+        display: inline-block;
+        width: toRem(32);
+        height: toRem(1);
+        background-color: currentColor;
+      }
+    }
+  }
+
+  &__detail {
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+    }
+
+    &__item {
+      &--bedroom::before {
+        @include iconBefore("../../assets/icons/bed.svg");
+      }
+
+      &--bathroom::before {
+        @include iconBefore("../../assets/icons/bath.svg");
+      }
+
+      &--carport::before {
+        @include iconBefore("../../assets/icons/car.svg");
+      }
+
+      &--floors::before {
+        @include iconBefore("../../assets/icons/stairs.svg");
+      }
+    }
+  }
+
+  &__realtor {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid $color-grey-1;
+      margin-bottom: toRem(32);
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__pictures {
+    position: relative;
+    width: 45%;
+    max-width: toRem(800);
+
+    &--main {
+      position: relative;
+      transition: transform .3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: toRem(40);
+        height: toRem(40);
+        transform: translate(-50%, -50%);
+        background-image: url("../../assets/icons/play.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+        z-index: 1;
+      }
+    }
+
+    img {
+      display: block;
+      border-radius: toRem(8);
+    }
+
+    img:not(:first-child) {
+      position: absolute;
+    }
+
+    img:nth-child(2) {
+      bottom: -10%;
+      left: -5%;
+      width: 40%;
+    }
+
+    img:nth-child(3) {
+      bottom: -10%;
+      left: 38%;
+      width: 20%;
+      height: 25%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    img:nth-child(4) {
+      bottom: -10%;
+      left: 60%;
+      width: 20%;
+      height: 25%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@include media-width-down('xl') {
+  .tour {
+    padding: $content-padding-xl;
+  }
+}
+
+@include media-width-down('lg') {
+  .tour {
+    display: block;
+    padding: $content-padding-lg;
+    &__box{
+      width: 100%;
+      padding-bottom: toRem(50);
+    }
+    &__pictures{
+      width: 100%;
+      margin: 0 auto;
+      img:nth-child(2) {
+        left: 5%;
+      }
+
+      img:nth-child(3) {
+        left: 48%;
+      }
+
+      img:nth-child(4) {
+        left: 70%;
+      }
+    }
+  }
+}
