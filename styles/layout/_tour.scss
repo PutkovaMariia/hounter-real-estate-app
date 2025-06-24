@@ -40,19 +40,19 @@
 
     &__item {
       &--bedroom::before {
-        @include iconBefore("../../assets/icons/bed.svg");
+        @include iconBefore("/assets/icons/bed.svg");
       }
 
       &--bathroom::before {
-        @include iconBefore("../../assets/icons/bath.svg");
+        @include iconBefore("/assets/icons/bath.svg");
       }
 
       &--carport::before {
-        @include iconBefore("../../assets/icons/car.svg");
+        @include iconBefore("/assets/icons/car.svg");
       }
 
       &--floors::before {
-        @include iconBefore("../../assets/icons/stairs.svg");
+        @include iconBefore("/assets/icons/stairs.svg");
       }
     }
   }
@@ -103,7 +103,7 @@
         width: toRem(40);
         height: toRem(40);
         transform: translate(-50%, -50%);
-        background-image: url("../../assets/icons/play.svg");
+        background-image: url("/assets/icons/play.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

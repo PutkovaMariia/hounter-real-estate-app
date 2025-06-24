@@ -85,7 +85,7 @@
           justify-content: center;
 
           &::before {
-            @include iconBefore("../../assets/icons/star.svg");
+            @include iconBefore("/assets/icons/star.svg");
             color: $color-secondary;
           }
         }

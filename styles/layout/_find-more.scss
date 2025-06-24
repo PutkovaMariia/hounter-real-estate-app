@@ -94,7 +94,7 @@
       display: flex;
       align-items: center;
       &::before {
-        @include iconBefore("../../assets/icons/clock.png", toRem(12));
+        @include iconBefore("/assets/icons/clock.png", toRem(12));
       }
     }
 

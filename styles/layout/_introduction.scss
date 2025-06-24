@@ -104,7 +104,7 @@
     width: toRem(24);
     height: toRem(24);
     background-color: $color-secondary;
-    mask: url("../../assets/icons/location.svg") center/contain no-repeat;
+    mask: url("/assets/icons/location.svg") center/contain no-repeat;
     display: inline-block;
     position: absolute;
     left: -(toRem(10));

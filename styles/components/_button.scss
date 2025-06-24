@@ -42,7 +42,7 @@
         margin-left: toRem(8);
 
         background-color: currentColor;
-        mask-image: url("../../assets/icons/arrow.svg");
+        mask-image: url("/assets/icons/arrow.svg");
         mask-size: contain;
         mask-repeat: no-repeat;
         mask-position: center;
@@ -149,7 +149,7 @@
       margin-right: toRem(5);
 
       &::after {
-        @include iconAfter("../../assets/icons/arrow.svg");
+        @include iconAfter("/assets/icons/arrow.svg");
       }
     }
   }
@@ -158,19 +158,19 @@
     margin-left: toRem(5);
 
     &--house::before {
-      @include iconBefore("../../assets/icons/house.svg");
+      @include iconBefore("/assets/icons/house.svg");
     }
 
     &--villa::before {
-      @include iconBefore("../../assets/icons/villa.svg");
+      @include iconBefore("/assets/icons/villa.svg");
     }
 
     &--apartment::before {
-      @include iconBefore("../../assets/icons/apartment.svg");
+      @include iconBefore("/assets/icons/cookie.svg");
     }
 
     &--contact::before {
-      @include iconBefore("../../assets/icons/call.svg");
+      @include iconBefore("/assets/icons/call.svg");
     }
   }
 
@@ -184,7 +184,7 @@
       width: toRem(24);
       height: toRem(24);
       background-color: currentColor;
-      mask-image: url("../../assets/icons/arrow.svg");
+      mask-image: url("/assets/icons/arrow.svg");
       mask-size: contain;
       mask-repeat: no-repeat;
       mask-position: center;
@@ -202,15 +202,15 @@
     padding: toRem(14) toRem(14);
     &--img-before {
       &--house::before {
-        @include iconBefore("../../assets/icons/house.svg", 0);
+        @include iconBefore("/assets/icons/house.svg", 0);
       }
 
       &--villa::before {
-        @include iconBefore("../../assets/icons/villa.svg", 0);
+        @include iconBefore("/assets/icons/villa.svg", 0);
       }
 
       &--apartment::before {
-        @include iconBefore("../../assets/icons/apartment.svg", 0);
+        @include iconBefore("/assets/icons/apartment.svg", 0);
       }
     }
     &__text {

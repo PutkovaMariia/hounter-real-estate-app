@@ -14,7 +14,7 @@
 }
 
 .cookie-text::before {
-  @include iconBefore("../../assets/icons/cookie.svg");
+  @include iconBefore("/assets/icons/cookie.svg");
 }
 
 .cookie-close {
